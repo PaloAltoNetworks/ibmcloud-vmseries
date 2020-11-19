@@ -35,7 +35,7 @@ variable "ssh_key_name" {
 # vnf_vpc_image_name - The name of the VM-Series custom image to be provisioned in your IBM Cloud account.
 ##############################################################################
 variable "vnf_vpc_image_name" {
-  default     = "VM-Series-byol"
+  default     = "vm-series-byol"
   description = "The name of the VM-Series custom image to be provisioned in your IBM Cloud account."
 }
 
@@ -43,7 +43,7 @@ variable "vnf_vpc_image_name" {
 # vnf_vpc_image_name - The name of your VM-Series Virtual Server to be provisioned
 ##############################################################################
 variable "vnf_instance_name" {
-  default     = "VM-Series-byol-vsi"
+  default     = "vm-series-byol-vsi"
   description = "The name of your VM-Series Virtual Server to be provisioned."
 }
 
