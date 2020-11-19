@@ -7,16 +7,16 @@ Use this template to create VM-Series virtual instance using qcow2 image from yo
 ## Deployment Options
 
 Note : 
-    - You can either run the code using your own Terraform CLI or use the IBM Cloud Schematics Workspace which can run Terraform for you.
-    - (Option 1) IBM Cloud Schematics: Create a schematics workspace and provide the github repository url (https://github.com/PaloAltoNetworks/ibmcloud) under settings to pull the latest code, so that you can set up your deployment variables from the `Create` page. Once the template is applied, IBM Cloud Schematics  provisions the resources based on the values that were specified for the deployment variables.
-    - (Option 2) Terraform CLI v0.12.x:
-        - [Setting up Terraform CLI and the IBM Cloud Provider Plug-in](https://cloud.ibm.com/docs/terraform?topic=terraform-tf-provider)
-        - You should update the parameters in the terraform.tfvars file.
-        - Execcute the following
-        
-        `terraform init`
-        
-        `terraform apply --auto-approve`
+- You can either run the code using your own Terraform CLI or use the IBM Cloud Schematics Workspace which can run Terraform for you.
+- (Option 1) IBM Cloud Schematics: Create a schematics workspace and provide the github repository url (https://github.com/PaloAltoNetworks/ibmcloud) under settings to pull the latest code, so that you can set up your deployment variables from the `Create` page. Once the template is applied, IBM Cloud Schematics  provisions the resources based on the values that were specified for the deployment variables.
+- (Option 2) Terraform CLI v0.12.x:
+    - [Setting up Terraform CLI and the IBM Cloud Provider Plug-in](https://cloud.ibm.com/docs/terraform?topic=terraform-tf-provider)
+    - You should update the parameters in the terraform.tfvars file.
+    - Execcute the following
+    
+    `terraform init`
+    
+    `terraform apply --auto-approve`
 
 ## Prerequisites
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
@@ -65,10 +65,10 @@ Fill in the following values, based on the steps that you completed before you b
 ## Notes
 
 If there is any failure during VSI creation, the created resources must be destroyed before attempting to instantiate again. 
-    - If you are using IBM Cloud Schematics: 
-        - To destroy resources go to `Schematics -> Workspaces -> [Your Workspace] -> Actions -> Delete` to delete  all associated resources. <br/>
-    - If you are using Terraform CLI:
-        - Execute `terraform destroy --auto-approve` 
+- If you are using IBM Cloud Schematics: 
+    - To destroy resources go to `Schematics -> Workspaces -> [Your Workspace] -> Actions -> Delete` to delete  all associated resources. <br/>
+- If you are using Terraform CLI:
+    - Execute `terraform destroy --auto-approve` 
 
 # Post VM-Series VSI Instance Spin-up (Optional)
 
