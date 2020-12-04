@@ -4,6 +4,10 @@
 #  - Ensure user provided resource_group is valid
 ##############################################################################
 
+terraform {
+  required_version = ">= 0.12"
+}
+
 variable "generation" {
   default     = 2
   description = "The VPC Generation to target. Valid values are 2 or 1."
