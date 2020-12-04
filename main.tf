@@ -4,9 +4,11 @@
 #  - Ensure user provided resource_group is valid
 ##############################################################################
 
-terraform {
-  required_version = ">= 0.12"
+variable "TF_VERSION" {
+ default = "0.12"
+ description = "terraform engine version to be used in schematics"
 }
+
 
 variable "generation" {
   default     = 2
