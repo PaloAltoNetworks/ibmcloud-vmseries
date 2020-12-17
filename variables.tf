@@ -65,9 +65,9 @@ variable "region" {
 # It is not needed while testing from Schematics
 ######################################################################################################
 
-variable "api_key" {
-  description = "Holds the User API key to authenticate with IBM Cloud Account"
-}
+#variable "api_key" {
+ # description = "Holds the User API key to authenticate with IBM Cloud Account"
+#}
 
 ##############################################################################
 # vnf_securtiy_group - The security group to which the first VSI interface(management) belongs to.
