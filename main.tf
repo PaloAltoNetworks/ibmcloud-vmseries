@@ -16,7 +16,7 @@ variable "generation" {
 }
 
 provider "ibm" {
-  ibmcloud_api_key      = var.api_key
+  #ibmcloud_api_key      = var.api_key
   generation            = var.generation
   region                = var.region
   ibmcloud_timeout      = 300
