@@ -63,7 +63,8 @@ resource "ibm_is_security_group_rule" "vnf_sg_rule_out_all" {
 resource "ibm_is_instance" "vnf_vsi" {
   depends_on = [ibm_is_security_group_rule.vnf_sg_rule_out_all]
   name           = "${var.vnf_instance_name}-${substr(random_uuid.test.result,0,8)}"
-  image          = ibm_is_image.vnf_custom_image.id
+ # image          = ibm_is_image.vnf_custom_image.id
+  image          = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
   profile        = data.ibm_is_instance_profile.vnf_profile.name
   resource_group = data.ibm_is_subnet.vnf_subnet1.resource_group
 
