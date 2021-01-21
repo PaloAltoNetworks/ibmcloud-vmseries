@@ -13,7 +13,7 @@
 ##############################################################################
 variable "image_name" {
   default     = "pa-vm-kvm-9-1-3-1"
-  description = "The name of the Palo Alto VM-Series (PanOS) image. Valid values are 'pa-vm-kvm-9-1-3-1'
+  description = "The name of the Palo Alto VM-Series (PanOS) image. Valid values are 'pa-vm-kvm-9-1-3-1"
 }
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
