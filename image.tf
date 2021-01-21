@@ -35,7 +35,7 @@ locals {
         }
           
 }
-
+	}
 output "map_instance" {
   value = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
 }          
