@@ -32,10 +32,10 @@ locals {
 		"jp-tok" = "r022-e37e9b23-e42c-46e6-a21a-6392c448f834"	
 		"eu-fr2" = "r030-c6a4d0ef-e88a-4bfd-a4b4-0835e065cdc7"
     "au-syd" = "r026-8d201ec3-6c48-45c4-9c61-ac1fd7720115"
-        }
-          
+        }        
 }
 	}
+
 output "map_instance" {
   value = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
 }          
