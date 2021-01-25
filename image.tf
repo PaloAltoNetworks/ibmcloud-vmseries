@@ -4,8 +4,8 @@
 ##############################################################################
 
 
-# Generating random ID
-#resource "random_uuid" "test" { }
+Generating random ID
+resource "random_uuid" "test" { }
 
 #resource "ibm_is_image" "vnf_custom_image" {
  # depends_on       = [random_uuid.test]
