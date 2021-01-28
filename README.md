@@ -14,6 +14,10 @@ https://www.paloaltonetworks.com
 PAN-OS 9.1.3
 
 
+## License Requirements
+The VM-Series on IBM Cloud supports bring-your-own-license (BYOL) as a licensing model. You can purchase your VM-Series license through normal Palo Alto Networks channels, and then deploy the VM-Series using the license authorization code you received.
+
+
 ## Prerequisites
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
 - A VPC with at least three subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
