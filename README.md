@@ -18,7 +18,7 @@ PAN-OS 9.1.3
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
 - A VPC with at least three subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
 - Identify region to install PAN-OS
-- us-east, us-south, eu-gb, eu-de, jp-tok, eu-fr2, au-syd
+    - us-east, us-south, eu-gb, eu-de, jp-tok, eu-fr2, au-syd
     
 ## Dependencies
 
