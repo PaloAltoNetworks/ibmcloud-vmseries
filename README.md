@@ -1,4 +1,4 @@
-# VM-Series on IBM Cloud
+# VM-Series on IBM Cloud (Standalone; HA options planned)
 
 IBM Cloud is an important deployment platform for your business-critical applications. Protecting the increased public cloud footprint from threats, data loss, and business disruption remains challenging. The VM-Series Virtual Next-Generation Firewall (NGFW) on IBM Cloud solves these challenges, enabling you to:
 Protect your workloads through unmatched application visibility and precise control.
