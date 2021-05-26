@@ -12,8 +12,8 @@
 # image_name - The name of the Palo Alto VM-Series (PanOS) image . Valid values are "pa-vm-kvm-9-1-3-1"
 ##############################################################################
 variable "image_name" {
-  default     = "pa-vm-kvm-9-1-3-1"
-  description = "The name of the Palo Alto VM-Series (PanOS) image. Valid values are 'pa-vm-kvm-9-1-3-1"
+  default     = "us-east"
+  description = "The region which the VM-series image will be installed. Options are us-east, us-south, ca-tor, eu-gb, eu-de, eu-fr2, au-syd, jp-osa, jp-tok"
 }
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
@@ -40,10 +40,10 @@ variable "ssh_key_name" {
 ##############################################################################
 # vnf_vpc_image_name - The name of the VM-Series custom image to be provisioned in your IBM Cloud account.
 ##############################################################################
-variable "vnf_vpc_image_name" {
-  default     = "vm-series-byol"
-  description = "The name of the VM-Series custom image to be provisioned in your IBM Cloud account (lowercase)"
-}
+# variable "vnf_vpc_image_name" {
+#   default     = "vm-series-byol"
+#   description = "The name of the VM-Series custom image to be provisioned in your IBM Cloud account (lowercase)"
+# }
 
 ##############################################################################
 # vnf_vpc_image_name - The name of your VM-Series Virtual Server to be provisioned
@@ -63,7 +63,7 @@ variable "vnf_profile" {
 
 variable "region" {
   default     = "us-east"
-  description = "The value of the region of VPC."
+  description = "The region which the VM-series image will be installed."
 }
 
 #####################################################################################################

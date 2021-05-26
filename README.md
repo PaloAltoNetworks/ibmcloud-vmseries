@@ -27,15 +27,15 @@ https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/license-the
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
 - A VPC with at least three subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
 - Identify region to install PAN-OS
-    us-east
-    us-south
-    ca-tor
-    eu-gb
-    eu-de
-    eu-fr2
-    au-syd
-    jp-osa
-    jp-tok
+ - us-east
+ - us-south
+ - ca-tor
+ - eu-gb
+ - eu-de
+ - eu-fr2
+ - au-syd
+ - jp-osa
+ - jp-tok
     
 ## Dependencies
 
