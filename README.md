@@ -12,17 +12,30 @@ https://www.paloaltonetworks.com
 
 ## Version
 PAN-OS 9.1.3
+Follow the standard upgrade process after the VM-series in installed if a newer release is required.
+
+ https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/about-the-vm-series-firewall/upgrade-the-vm-series-firewall/upgrade-the-vm-series-model.html
 
 
 ## License Requirements
-The VM-Series on IBM Cloud supports bring-your-own-license (BYOL) as a licensing model. You can purchase your VM-Series license through normal Palo Alto Networks channels, and then deploy the VM-Series using the license authorization code you received.
+The VM-Series on IBM Cloud supports bring-your-own-license (BYOL) as a licensing model. You can purchase your VM-Series license through normal Palo Alto Networks channels, and then deploy the VM-Series using the license authorization code you received. 
+https://docs.paloaltonetworks.com/vm-series/10-0/vm-series-deployment/license-the-vm-series-firewall/vm-series-models/license-typesvm-series-firewalls
 
+https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/license-the-vm-series-firewall.html
 
 ## Prerequisites
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
 - A VPC with at least three subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
 - Identify region to install PAN-OS
-    - us-east, us-south, eu-gb, eu-de, jp-tok, eu-fr2, au-syd
+    us-east
+    us-south
+    eu-gb
+    eu-de
+    jp-tok
+    eu-fr2
+    au-syd
+    ca-tor
+    jp-osa
     
 ## Dependencies
 

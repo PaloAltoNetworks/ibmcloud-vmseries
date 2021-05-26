@@ -32,6 +32,8 @@ locals {
 		"jp-tok" = "r022-e37e9b23-e42c-46e6-a21a-6392c448f834"	
 		"eu-fr2" = "r030-c6a4d0ef-e88a-4bfd-a4b4-0835e065cdc7"
     "au-syd" = "r026-8d201ec3-6c48-45c4-9c61-ac1fd7720115"
+    "ca-tor" = "r038-01f97815-9b3c-47c5-840c-f50d4ddc8ea5"
+    "jp-osa" = "r034-a9430fad-9f49-49a7-ace5-c19db212a24d"
         }        
 }
 	}
