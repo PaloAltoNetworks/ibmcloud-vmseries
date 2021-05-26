@@ -29,13 +29,13 @@ https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/license-the
 - Identify region to install PAN-OS
     us-east
     us-south
+    ca-tor
     eu-gb
     eu-de
-    jp-tok
     eu-fr2
     au-syd
-    ca-tor
     jp-osa
+    jp-tok
     
 ## Dependencies
 
@@ -57,8 +57,7 @@ Fill in the following values, based on the steps that you completed before you b
 
 | Key | Definition | Value Example |
 | --- | ---------- | ------------- |  
-| `image_name` | The name of the Palo Alto VM-Series (PanOS) image. Valid values are 'pa-vm-kvm-9-1-3-1". | "pa-vm-kvm-9-1-3-1" |
-| `region` | The VPC region that you want your VPC virtual servers to be provisioned. | "us-south" |
+| `region` | The VPC region that you want your VPC virtual servers to be provisioned. | "us-east us-south ca-tor eu-gb eu-de eu-fr2 au-syd jp-osa jp-tok" |
 | `vnf_profile` | The profile of compute CPU and memory resources to be used when provisioning the vnf instance. To list available profiles, run `ibmcloud is instance-profiles`. | "bx2-8x32" |
 | `subnet_id1` | The ID of the subnet(management) which will be associated with first interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `subnet_id2` | The ID of the subnet(untrust) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
@@ -76,7 +75,7 @@ If there is any failure during VSI creation, the created resources must be destr
 - If you are using Terraform CLI:
     - Execute `terraform destroy --auto-approve` 
 
-# Post VM-Series VSI Instance Spin-up (Optional)
+# Post VM-Series VSI Instance Spin-up
 
 1. From the VPC list, confirm the VM-Series VSI is powered ON with green button
 2. Assign a Floating IP to the VM-Series VSI. Refer the steps below to associate floating IP
@@ -88,7 +87,7 @@ If there is any failure during VSI creation, the created resources must be destr
     - Select VM-Series instance (eth0) from `Instance to bind` column.
     - After clicking `Bind`, you can see the IP address assigned to your VM-Series-VSI Instance.
 3. Wait for VM-Series VSI to boot up.
-4. From the CLI, run `ssh -i private_key.pem admin@<Floating IP>`.
+4. Connect via web browser GUI, https://floatingIPaddress or from the CLI, run `ssh -i private_key.pem admin@<Floating IP>`.
 
 Note: Default credentials are "admin":"admin" when using the VM-Series image. After the first login, you will be prompted to change your password for security reasons. PLEASE CHANGE DEFAULT LOGIN CREDENTIALS
 
