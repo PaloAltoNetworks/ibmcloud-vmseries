@@ -36,7 +36,7 @@ Before you can apply the template in IBM Cloud, complete the following steps.
     - VPC ()
     - SSH Key: [Public SSH Key Doc](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys)
     - VPC has 3 subnets
-    - _(Optional):_ A Floating IP Address to assign to the management interface of VM-Series instance post deployment
+    - Floating IP (FIP) Address to assign to the management interface of VM-Series instance post deployment. FIP is used to access your VPC virtual server instance over the public internet. https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-rest-apis#create-floating-ip-api-tutorial
 
 
 ### Required Parameters for Deployment
@@ -51,7 +51,6 @@ Fill in the following values, based on the steps that you completed before you b
 | `subnet_id2` | The ID of the subnet(untrust) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `subnet_id3` | The ID of the subnet(trust) which will be associated with third interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `vnf_security_group` | The name of the security group to which the VNF Instance's first interface(management) belong to | "vm-series-mgmt-sg" |
-| `vnf_vpc_image_name` | The starting name of the VM-Series qcow2 Custom Image to be provisioned in your IBM Cloud account and (if already available) to be used to create the VM-Series virtual server instance. The name is appended with UUID, to create a unique custom image for every run. | "vm-series-fw-image" |
 | `vnf_instance_name` | The name of the VNF instance to be provisioned (lower-case). | "vm-series-fw-vsi" |
 | `ssh_key_name` | The name of your public SSH key to be used for VSI. Follow [Public SSH Key Doc](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys) for creating and managing ssh key. | "vm-series-ssh-key" |
 
@@ -60,7 +59,7 @@ Fill in the following values, based on the steps that you completed before you b
 
 If there is any failure during VSI creation, the created resources must be destroyed before attempting to instantiate again. 
 - If you are using IBM Cloud Schematics: 
-    - To destroy resources go to `Schematics -> Workspaces -> [Your Workspace] -> Actions -> Delete` to delete  all associated resources. <br/>
+    - To destroy resources go to `Schematics -> Workspaces -> [Your Workspace] -> Actions -> Delete` to delete  all associated resources.
 - If you are using Terraform CLI:
     - Execute `terraform destroy --auto-approve` 
 
