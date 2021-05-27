@@ -58,7 +58,7 @@ Fill in the following values, based on the steps that you completed before you b
 | Key | Definition | Value Example |
 | --- | ---------- | ------------- |  
 | `region` | The VPC region that you want your VPC virtual servers to be provisioned. | "us-east us-south ca-tor eu-gb eu-de eu-fr2 au-syd jp-osa jp-tok" |
-| `vnf_profile` | The profile of compute CPU and memory resources to be used when provisioning the vnf instance. To list available profiles, run `ibmcloud is instance-profiles`. | "bx2-8x32" |
+| `vnf_profile` | The profile of compute CPU and memory resources to be used when provisioning the vnf instance. To list available profiles, run `ibmcloud is instance-profiles`or https://cloud.ibm.com/docs/vpc?topic=vpc-profiles. | "bx2-8x32" |
 | `subnet_id1` | The ID of the subnet(management) which will be associated with first interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `subnet_id2` | The ID of the subnet(untrust) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `subnet_id3` | The ID of the subnet(trust) which will be associated with third interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |

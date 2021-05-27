@@ -5,7 +5,7 @@
 
 
 # Generating random ID
-resource "random_uuid" "test" { }
+#resource "random_uuid" "test" { }
 
 #resource "ibm_is_image" "vnf_custom_image" {
  # depends_on       = [random_uuid.test]
@@ -36,8 +36,8 @@ locals {
     "jp-osa" = "r034-a9430fad-9f49-49a7-ace5-c19db212a24d"
         }        
 }
-	}
+# 	}
 
-output "map_instance" {
-  value = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
+# output "map_instance" {
+#   value = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
 }          
