@@ -11,10 +11,10 @@
 ##############################################################################
 # image_name - The name of the Palo Alto VM-Series (PanOS) image . Valid values are "pa-vm-kvm-9-1-3-1"
 ##############################################################################
-# variable "image_name" {
-#   default     = "us-east"
-#   description = "The region which the VM-series image will be installed. Options are us-east, us-south, ca-tor, eu-gb, eu-de, eu-fr2, au-syd, jp-osa, jp-tok"
-# }
+ variable "image_name" {
+   default     = "pa-vm-kvm-9-1-3-1"
+   description = "The name of the VM-series image to be installed. Valid value is pa-vm-kvm-9-1-3-1"
+ }
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
 ##############################################################################
