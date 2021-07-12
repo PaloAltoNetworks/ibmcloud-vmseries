@@ -5,7 +5,7 @@
 ##############################################################################
 
 variable "TF_VERSION" {
- default = "0.12"
+ default = "0.13"
  description = "terraform engine version to be used in schematics"
 }
 
@@ -15,12 +15,12 @@ variable "generation" {
   description = "The VPC Generation to target. Valid values are 2 or 1."
 }
 
-provider "ibm" {
+#provider "ibm" {
   #ibmcloud_api_key      = var.api_key
-  generation            = var.generation
-  region                = var.region
-  ibmcloud_timeout      = 300
-}
+#  generation            = var.generation
+#  region                = var.region
+# ibmcloud_timeout      = 300
+#}
 
 ##############################################################################
 # Read/validate Region
