@@ -25,7 +25,7 @@ https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/license-the
 
 ## Prerequisites
 - Have access to [IBM Cloud Gen 2 VPC](https://cloud.ibm.com/vpc-ext/).
-- A VPC with at least three subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
+- A VPC with at least two subnets and one IP address unassigned in each subnet - the VM-Series VSI will be assigned the IP Addresses in its interfaces from the user provided subnets as the input. [Reference](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console#creating-a-vpc-and-subnet)
 - Identify region to install PAN-OS
     - us-east
     - us-south
@@ -48,7 +48,7 @@ Before you can apply the template in IBM Cloud, complete the following steps.
 2.  Ensure the following resources exist in your VPC Gen 2 environment
     - VPC ()
     - SSH Key: [Public SSH Key Doc](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys)
-    - VPC has 3 subnets
+    - VPC has 2 subnets
     - Floating IP (FIP) Address to assign to the management interface of VM-Series instance post deployment. FIP is used to access your VPC virtual server instance over the public internet. https://cloud.ibm.com/docs/vpc?topic=vpc-creating-a-vpc-using-the-rest-apis#create-floating-ip-api-tutorial
 
 
@@ -61,7 +61,6 @@ Fill in the following values, based on the steps that you completed before you b
 | `vnf_profile` | The profile of compute CPU and memory resources to be used when provisioning the vnf instance. To list available profiles, run `ibmcloud is instance-profiles`or https://cloud.ibm.com/docs/vpc?topic=vpc-profiles. | "bx2-8x32" |
 | `subnet_id1` | The ID of the subnet(management) which will be associated with first interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `subnet_id2` | The ID of the subnet(untrust) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
-| `subnet_id3` | The ID of the subnet(trust) which will be associated with third interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `vnf_security_group` | The name of the security group to which the VNF Instance's first interface(management) belong to | "vm-series-mgmt-sg" |
 | `vnf_instance_name` | The name of the VNF instance to be provisioned (lower-case). | "vm-series-fw-vsi" |
 | `ssh_key_name` | The name of your public SSH key to be used for VSI. Follow [Public SSH Key Doc](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys) for creating and managing ssh key. | "vm-series-ssh-key" |
