@@ -10,10 +10,10 @@ variable "TF_VERSION" {
 }
 
 
-variable "generation" {
-  default     = 2
-  description = "The VPC Generation to target. Valid values are 2 or 1."
-}
+#variable "generation" {
+#  default     = 2
+#  description = "The VPC Generation to target. Valid values are 2 or 1."
+#}
 
 #provider "ibm" {
   #ibmcloud_api_key      = var.api_key
