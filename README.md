@@ -12,6 +12,8 @@ https://www.paloaltonetworks.com
 
 ## Version
 PAN-OS 9.1.3
+PAN-OS 10.0.6
+
 Follow the standard upgrade process after the VM-series in installed if a newer release is required.
 
  https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/about-the-vm-series-firewall/upgrade-the-vm-series-firewall/upgrade-the-vm-series-model.html
@@ -32,7 +34,6 @@ https://docs.paloaltonetworks.com/vm-series/9-1/vm-series-deployment/license-the
     - ca-tor
     - eu-gb
     - eu-de
-    - eu-fr2
     - au-syd
     - jp-osa
     - jp-tok
@@ -57,10 +58,10 @@ Fill in the following values, based on the steps that you completed before you b
 
 | Key | Definition | Value Example |
 | --- | ---------- | ------------- |  
-| `region` | The VPC region that you want your VPC virtual servers to be provisioned. | "us-east us-south ca-tor eu-gb eu-de eu-fr2 au-syd jp-osa jp-tok" |
+| `region` | The VPC region that you want your VPC virtual servers to be provisioned. | "us-east us-south ca-tor eu-gb eu-de au-syd jp-osa jp-tok" |
 | `vnf_profile` | The profile of compute CPU and memory resources to be used when provisioning the vnf instance. To list available profiles, run `ibmcloud is instance-profiles`or https://cloud.ibm.com/docs/vpc?topic=vpc-profiles. | "bx2-8x32" |
 | `subnet_id1` | The ID of the subnet(management) which will be associated with first interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
-| `subnet_id2` | The ID of the subnet(untrust) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
+| `subnet_id2` | The ID of the subnet(dataplane) which will be associated with second interface of the VNF instance. Click on the subnet details in the VPC Subnet Listing to determine this value | "0717-xxxxxx-xxxx-xxxxx-8fae-xxxxx" |
 | `vnf_security_group` | The name of the security group to which the VNF Instance's first interface(management) belong to | "vm-series-mgmt-sg" |
 | `vnf_instance_name` | The name of the VNF instance to be provisioned (lower-case). | "vm-series-fw-vsi" |
 | `ssh_key_name` | The name of your public SSH key to be used for VSI. Follow [Public SSH Key Doc](https://cloud.ibm.com/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys) for creating and managing ssh key. | "vm-series-ssh-key" |

@@ -34,10 +34,20 @@ locals {
     "au-syd" = "r026-8d201ec3-6c48-45c4-9c61-ac1fd7720115"
     "ca-tor" = "r038-01f97815-9b3c-47c5-840c-f50d4ddc8ea5"
     "jp-osa" = "r034-a9430fad-9f49-49a7-ace5-c19db212a24d"
-        }        
-}
-	}
-
+        }     
+  pa-vm-kvm-10-0-6 = {
+    "us-south" = "r006-a2d7b1fe-feef-45c7-9d43-176899fa699b"
+    "us-east" = "r014-7eb6331a-7452-47cf-927f-8a521cf24ed1"
+    "jp-tok" = "r022-38517558-8db8-44e3-8447-b17fd4be58c7"
+    "jp-osa" = "r034-b6df3c95-4d9f-48d1-b93e-e75cecff8164"
+    "eu-gb" = "r018-7541bd69-0342-47db-b878-93d947ce82b7"
+    "eu-de" = "r010-e4b9ba8c-b311-4add-a373-74dc6ce69561"
+    "ca-tor" = "r038-fcf5a57e-e7e1-475a-923e-3733d462156b"
+    "br-sao" = "r042-237b8f2e-7ef4-4260-9678-1b97dbd554e2"
+    "au-syd" = "r026-4e5a9dc0-9552-43e3-b748-ef6cca08e11e"
+        } 
+  }
+        }
  output "map_instance" {
    value = lookup(local.image_map[var.image_name], data.ibm_is_region.region.name)
 }          

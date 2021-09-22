@@ -12,8 +12,8 @@
 # image_name - The name of the Palo Alto VM-Series (PanOS) image . Valid values are "pa-vm-kvm-9-1-3-1"
 ##############################################################################
  variable "image_name" {
-   default     = "pa-vm-kvm-9-1-3-1"
-   description = "The name of the VM-series image to be installed. Valid value is pa-vm-kvm-9-1-3-1"
+   default     = "pa-vm-kvm-10-0-6"
+   description = "The name of the VM-series image to be installed. Valid values are pa-vm-kvm-9-1-3-1 and pa-vm-kvm-10-0-6"
  }
 ##############################################################################
 # subnet_ids - Subnet where resources are to be provisioned.
@@ -23,7 +23,7 @@ variable "subnet_id1"{
 }
 
 variable "subnet_id2"{
-  description = "The id of the subnet to which VM-Series VSI's second interface(data plane) belongs to"
+  description = "The id of the subnet to which VM-Series VSI's second interface(dataplane) belongs to"
 }
 
 # variable "subnet_id3"{
