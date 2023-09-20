@@ -63,7 +63,7 @@ variable "vnf_profile" {
 
 variable "region" {
   default     = "us-east"
-  description = "The region which the VPC instance is located. Options are us-east, us-south, ca-tor, eu-gb, eu-de, eu-fr2, au-syd, jp-osa, jp-tok."
+  description = "The region which the VPC instance is located. Options are us-east, us-south, ca-tor, eu-gb, eu-de, eu-es, eu-fr2, au-syd, jp-osa, jp-tok."
 }
 
 #####################################################################################################
